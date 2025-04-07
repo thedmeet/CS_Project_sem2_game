@@ -1,0 +1,52 @@
+/* Background styling */
+body {
+    background-image: url("zombie.jpg"); /* Ensure this image exists in your project */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full screen height */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button styling */
+.endless-mode {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4444;
+    text-shadow: 0 0 10px rgba(255, 68, 68, 0.9), 
+                 0 0 20px rgba(255, 68, 68, 0.7), 
+                 0 0 40px rgba(255, 68, 68, 0.5);
+    background: rgba(0, 0, 0, 0.8); /* Dark translucent background */
+    padding: 15px 30px;
+    border: 3px solid #ff4444;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+    animation: pulseGlow 1.5s infinite alternate;
+    text-decoration: none;
+}
+
+/* Pulsating glow effect */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 68, 68, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(255, 68, 68, 1);
+    }
+}
+
+/* Hover effect */
+.endless-mode:hover {
+    color: #fff;
+    background: #ff4444;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 1), 
+                 0 0 40px rgba(255, 255, 255, 0.8);
+    border-color: #fff;
+    transform: scale(1.1);
+}
+
