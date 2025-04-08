@@ -76,9 +76,10 @@ function animate() {
       document.querySelector('#hearts').innerHTML = hearts
 
       if (hearts === 0) {
-        console.log('game over')
+        //console.log('game over')
         cancelAnimationFrame(animationId)
-        document.querySelector('#gameOver').style.display = 'flex'
+        //document.querySelector('#gameOver').style.display = 'flex'
+        window.location.href = "game_over.html";
       }
     }
   }
@@ -98,8 +99,8 @@ function animate() {
   // tracking total amount of enemies
   if (enemies.length === 0) {
     enemyCount += 2
-    const newHealthhealth = 100 + enemyCount * 2
-    const  newSpeedIncrease = enemyCount * 0.1
+    const newHealthhealth = 100 + enemyCount * 6
+    const  newSpeedIncrease = enemyCount * 0.5
     spawnEnemies(enemyCount, newHealthhealth, newSpeedIncrease)
     // spawnEnemies(enemyCount)  }
   }
@@ -138,6 +139,7 @@ function animate() {
 
           if (enemyIndex > -1) {
             enemies.splice(enemyIndex, 1)
+            console.log(killed)
             coins += 25
            
             document.querySelector('#coins').innerHTML = coins
