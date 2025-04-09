@@ -139,7 +139,7 @@ function animate() {
 
           if (enemyIndex > -1) {
             enemies.splice(enemyIndex, 1)
-            console.log(killed)
+            
             coins += 25
            
             document.querySelector('#coins').innerHTML = coins
