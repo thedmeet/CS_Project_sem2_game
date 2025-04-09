@@ -99,8 +99,8 @@ function animate() {
   // tracking total amount of enemies
   if (enemies.length === 0) {
     enemyCount += 2
-    const newHealthhealth = 100 + enemyCount * 6
-    const  newSpeedIncrease = enemyCount * 0.5
+    const newHealthhealth = 100 + enemyCount * 2
+    const  newSpeedIncrease = enemyCount * 0.2
     spawnEnemies(enemyCount, newHealthhealth, newSpeedIncrease)
     // spawnEnemies(enemyCount)  }
   }
